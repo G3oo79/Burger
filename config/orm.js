@@ -11,7 +11,7 @@ var orm = {
 		});
 	},
 
-	insertOne: function (vals, cb) {
+	insertOne: function (table, cols,vals, cb) {
 		var insOne = 'INSERT INTO burgers (burger_name) VALUES (" + value +")'; 
 
 		connection.query(insOne, function (err, insresult) {
@@ -21,7 +21,7 @@ var orm = {
 	},
 
 	update: function (id, cb) {
-		var queryString = 'UPDATE burgers SET devoured = true WHERE id' + id;
+		var queryString = 'UPDATE burgers SET devoured = true WHERE id' + id';';
 
 		console.log(queryString);
 
